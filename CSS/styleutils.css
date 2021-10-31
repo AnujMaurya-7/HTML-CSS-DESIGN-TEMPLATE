@@ -1,0 +1,48 @@
+.primary-heading {
+  font-size: 2.5rem;
+}
+
+.secondary-heading {
+  font-size: 2rem;
+}
+
+.third-heading {
+  font-size: 1.4rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.space-around {
+  justify-content: space-around;
+}
+
+.line-height {
+  line-height: 1.6;
+}
+
+.light-span {
+  font-size: 2.3rem;
+  text-transform: uppercase;
+}
+
+.text-center {
+  text-align: center;
+}

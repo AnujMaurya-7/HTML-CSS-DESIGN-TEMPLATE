@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--dark);
+  background-color: var(--light);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  outline: none;
+}
+
+p {
+  letter-spacing: 0.5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button,
+input,
+textarea {
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --primary: rgb(0, 48, 91);
+  --secondary: rgb(15, 76, 133);
+  --danger: rgb(234, 244, 246);
+  --background-shadow: #5aa6ed;
+  --dark: #20303c;
+  --light: #f9fafa;
+  --heaven: white;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: var(--heaven);
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.logo a {
+  color: var(--primary);
+  font-size: 1.6rem;
+}
+
+.link-list {
+  width: 500px;
+}
+
+.link-list li {
+  cursor: pointer;
+}
+
+.link-list a {
+  font-size: 13px;
+  padding: 1rem;
+  color: var(--dark);
+  font-weight: 300;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+/* .link-list a:after {
+  content: "";
+  width: auto;
+  height: 2px;
+  background-color: var(--secondary);
+  position: absolute;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+
+.link-list a:hover::after {
+  transform: scaleX(1);
+} */
+
+.link-list a:hover {
+  color: var(--primary);
+}
+
+#home {
+  background-attachment: fixed !important;
+  background: url(/images/buildings.jpg) no-repeat center center/cover;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  color: var(--heaven);
+}
+
+.tagline p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.tagline-wrap {
+  position: relative;
+  min-height: 100vh;
+  width: 40%;
+  z-index: 2;
+  align-items: flex-end;
+}
+
+.tagline-wrap::before {
+  content: "";
+  position: absolute;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: var(--primary);
+  width: 100%;
+  opacity: 0.75;
+  z-index: -2;
+}
+
+.tagline {
+  position: relative;
+  z-index: 7;
+  min-height: 100vh;
+  width: 55%;
+}
+.practice-area {
+  width: 100%;
+  min-height: 70vh;
+}
+.pc-title {
+  background-color: var(--danger);
+  align-items: flex-end;
+  width: 55.5%;
+  padding-right: 2rem;
+}
+
+.pc-title h1,
+.pc-title span {
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.pc-content {
+  padding: 4rem;
+}
+
+.pc-list {
+  display: grid;
+  place-items: center;
+  grid-gap: 40px;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  grid-template-rows: repeat(3, minmax(100px, 1fr));
+}
+
+.pc-box h3 {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+
+.pc-box p {
+  color: var(--secondary);
+}
+
+.our-vision {
+  background-color: var(--primary);
+  color: var(--heaven);
+  padding: 4rem 8rem;
+}
+
+.our-vision h1 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.image-wrap {
+  background-attachment: fixed !important;
+  background: url(/images/pexels-fauxels-3183197.jpg) no-repeat center
+    center/cover;
+  width: 100%;
+  min-height: 75vh;
+  position: relative;
+  z-index: 2;
+}
+
+.image-wrap::before {
+  content: "";
+  background: var(--danger);
+  width: 100%;
+  min-height: 75vh;
+  position: absolute;
+  z-index: -2;
+  opacity: 0.3;
+}
+
+.our-attorney {
+  background-color: var(--danger);
+  padding: 4rem;
+}
+.our-attorney h1 {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+
+.attorney-box h3 {
+  color: var(--primary);
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 1.7rem 0 0.5rem 0;
+}
+
+.attorney-box {
+  margin-right: 2rem;
+  margin-bottom: 2.5rem;
+}
+.attorney-container {
+  width: 60%;
+  margin-right: -2rem;
+}
+
+.partner {
+  color: var(--secondary);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.partner-img {
+  width: 193px;
+  height: 220px;
+}
+
+.partner-img img {
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.attorney-info {
+  margin-top: 2rem;
+  color: var(--secondary);
+}
+.attorney-info a,
+.attorney-box hr {
+  color: var(--secondary);
+}
+
+.contact {
+  overflow-x: hidden;
+  background-attachment: fixed !important;
+  position: relative;
+  background: url(/images/buildings.jpg) no-repeat center center/cover;
+  width: 100%;
+  min-height: 100%;
+  z-index: 2;
+  color: var(--heaven);
+}
+
+.contact a {
+  color: var(--heaven);
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  background: var(--secondary);
+  width: 100%;
+  min-height: 100%;
+  z-index: -2;
+  opacity: 0.7;
+}
+
+.contact-overlay {
+  position: relative;
+  z-index: 4;
+  width: 40%;
+  min-height: 100%;
+  justify-content: flex-end;
+}
+
+.contact-overlay::before {
+  content: "";
+  background-color: var(--primary);
+  opacity: 0.75;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.contact-overlay h1 {
+  padding-top: 100px;
+  text-transform: uppercase;
+  font-weight: 400;
+  width: 40%;
+}
+
+.form-address-wrap {
+  padding: 50px 3rem 3rem 3rem;
+}
+.form-address-wrap h3 {
+  padding: 2rem 0;
+}
+
+.form-address-wrap h3 a {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.address h3 {
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+
+.address span {
+  display: block;
+  padding: 0.2rem 0;
+}
+
+.input-label-group label {
+  font-size: 1.1rem;
+}
+.input-label-group {
+  margin-bottom: 0.5rem;
+}
+
+.input-wrap {
+  width: 300px;
+  margin-right: 2rem;
+}
+
+.input-box {
+  padding: 0.2rem 0.3rem;
+  font-size: 1rem;
+  margin-top: 0.3rem;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+}
+
+.input-box:focus {
+  border: 2px solid var(--background-shadow);
+  box-shadow: 0.5px 0.5px 3px 1px var(--background-shadow);
+}
+
+.address p {
+  padding: 0.2rem 0;
+  padding-bottom: 0.1rem;
+}
+
+.form p {
+  padding-bottom: 1rem;
+}
+
+.textarea-group-wrap .input-wrap {
+  height: 206px;
+  margin-right: 1rem;
+}
+
+.textarea-group-wrap textarea {
+  height: 100%;
+}
+
+.textarea-group-wrap textarea:focus {
+  outline: none;
+}
+
+.btn-submit {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  padding: 0.5rem 2rem;
+  color: var(--heaven);
+  background-color: var(--secondary);
+  border: 2px solid var(--heaven);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: var(--primary);
+}
+
+.move-top {
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+  color: var(--heaven);
+}
+
+.move-top p {
+  font-size: 1.2rem;
+  margin-top: 0.6rem;
+}
+.move-top a {
+  font-size: 3rem;
+  color: var(--heaven);
+  cursor: pointer;
+}
+
+.footer {
+  padding: 2rem;
+}
+
+.copyright p {
+  color: var(--secondary);
+  font-size: 13px;
+}
+
+.media-icons a {
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
+  color: var(--secondary);
+  transition: all 0.3 ease;
+}
+
+.media-icons a:hover {
+  color: var(--primary);
+}
